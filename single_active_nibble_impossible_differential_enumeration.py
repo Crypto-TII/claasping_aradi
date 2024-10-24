@@ -1,6 +1,7 @@
 import numpy as np
 from claasp.ciphers.block_ciphers.aradi_block_cipher_sbox import AradiBlockCipherSBox
 from claasp.cipher_modules.models.utils import set_fixed_variables, integer_to_bit_list
+
 cipher = AradiBlockCipherSBox(number_of_rounds=7)
 model = cipher.get_model('cp', 'xor_differential')
 search_function = model.find_one_xor_differential_trail
