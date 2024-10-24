@@ -1,5 +1,6 @@
 from claasp.cipher_modules.models.utils import set_fixed_variables, integer_to_bit_list
 from claasp.ciphers.block_ciphers.aradi_block_cipher_sbox import AradiBlockCipherSBox
+
 cipher = AradiBlockCipherSBox(number_of_rounds=9)
 from claasp.cipher_modules.models.sat.sat_models.sat_xor_differential_model import SatXorDifferentialModel
 key = set_fixed_variables(component_id='key', constraint_type='equal', bit_positions=range(256), bit_values= [0]*256)
